@@ -27,7 +27,7 @@ public class MainTabActivity extends TabActivity implements
 	private Intent mBIntent;
 	private Intent mCIntent;
 	private Intent mDIntent;
-	private Intent mEIntent;
+	
 
 	/** Called when the activity is first created. */
 	@Override
@@ -40,7 +40,7 @@ public class MainTabActivity extends TabActivity implements
 		this.mBIntent = new Intent(this, SearchActivity.class);
 		this.mCIntent = new Intent(this, PostActivity.class);
 		this.mDIntent = new Intent(this, MainActivity.class);
-		this.mEIntent = new Intent(this, MainActivity.class);
+		
 
 		((RadioButton) findViewById(R.id.radio_button0))
 				.setOnCheckedChangeListener(this);
@@ -50,8 +50,7 @@ public class MainTabActivity extends TabActivity implements
 				.setOnCheckedChangeListener(this);
 		((RadioButton) findViewById(R.id.radio_button3))
 				.setOnCheckedChangeListener(this);
-		((RadioButton) findViewById(R.id.radio_button4))
-				.setOnCheckedChangeListener(this);
+		
 
 		setupIntent();
 	}
@@ -72,9 +71,7 @@ public class MainTabActivity extends TabActivity implements
 			case R.id.radio_button3:
 				this.mTabHost.setCurrentTabByTag("D_TAB");
 				break;
-			case R.id.radio_button4:
-				this.mTabHost.setCurrentTabByTag("MORE_TAB");
-				break;
+			
 			}
 		}
 
@@ -96,8 +93,6 @@ public class MainTabActivity extends TabActivity implements
 		localTabHost.addTab(buildTabSpec("D_TAB", R.string.main_friends,
 				R.drawable.icon_4_n, this.mDIntent));
 
-		localTabHost.addTab(buildTabSpec("MORE_TAB", R.string.more,
-				R.drawable.icon_5_n, this.mEIntent));
 
 	}
 
