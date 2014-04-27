@@ -2,6 +2,10 @@ package mobile.freefood;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+
+import com.parse.Parse;
+import com.parse.ParseObject;
+
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
@@ -19,7 +23,13 @@ public class MainActivity extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		
+		
 		setContentView(R.layout.main);
+		Parse.initialize(this, "Bu2q9uraadQLZ04VPuHdPStxW88z0ITFHhVUyGmq", "IWsxvwWJxbJ4jgTx63LgBBSYfqYBo2LPZKlYENaJ");
+		ParseObject testObject = new ParseObject("TestObject");
+		testObject.put("foo", "bar");
+		testObject.saveInBackground();
 		 ListView list = (ListView) findViewById(R.id.ListView01);  
          
 	        //生成动态数组，加入数据  

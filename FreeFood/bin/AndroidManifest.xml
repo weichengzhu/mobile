@@ -28,5 +28,6 @@
          <activity android:name="mobile.freefood.SearchActivity"></activity>
          <activity android:name="mobile.freefood.MapActivity"></activity>
     </application>
-
+<uses-permission android:name="android.permission.INTERNET" />
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 </manifest>
