@@ -14,13 +14,12 @@ import android.widget.ListView;
 import android.widget.SimpleAdapter;
 
 
-public class DetailActivity extends Activity {
+public class PostActivity extends Activity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.detail);
-		setTitle("Detail");
+		setContentView(R.layout.post);
 	}
 		@Override
 		public boolean onCreateOptionsMenu(Menu menu) {

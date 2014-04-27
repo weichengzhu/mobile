@@ -24,6 +24,9 @@
         </activity>
         <activity android:name="mobile.freefood.DetailActivity"></activity>
          <activity android:name="mobile.freefood.MainActivity"></activity>
+         <activity android:name="mobile.freefood.PostActivity"></activity>
+         <activity android:name="mobile.freefood.SearchActivity"></activity>
+         <activity android:name="mobile.freefood.MapActivity"></activity>
     </application>
 
 </manifest>
